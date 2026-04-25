@@ -2,24 +2,44 @@
 layout: page
 title: contact
 permalink: /contact/
-description: Start a conversation about pilots, partnerships, and governance-ready workflows.
+description: Verken een pilot of samenwerking rond biodiversiteitsmonitoring, EBV’s en navolgbare AI-ondersteuning.
 nav: true
 nav_order: 3
 ---
 
-## Start a conversation
+## Start een verkenning
 
-NatureDesk is aimed at careful, practical work in biodiversity monitoring, policy interpretation, and governance support.
+NatureDesk richt zich op zorgvuldige, praktische ondersteuning bij biodiversiteitsmonitoring, documentanalyse en besluitvorming in de publieke en semipublieke context.
 
-### Good reasons to reach out
+### Redenen om contact op te nemen
 
-- you want to explore an evidence-grounded AI workflow for nature governance
-- you need source-linked memo or reporting support
-- you are shaping a pilot around biodiversity, landscapes, or monitoring data
-- you care about sovereignty, traceability, and governance constraints from day one
+- u wilt verkennen hoe biodiversiteitsdata, EBV’s en beleidsinformatie beter kunnen samenkomen;
+- u werkt aan een pilot rond natuurbeleid, gebiedsgericht werken of monitoring;
+- u zoekt een navolgbare werkwijze voor memo’s, analyses of rapportages;
+- u wilt AI alleen inzetten als broncontrole, uitlegbaarheid en bestuurlijke betrouwbaarheid voldoende zijn geborgd;
+- u wilt BON in a Box en NatureDesk in samenhang bekijken: van dataworkflow tot besluitondersteuning.
 
-### Current public touchpoint
+### Geschikte contexten
+
+NatureDesk is met name relevant voor:
+
+- gemeenten;
+- provincies;
+- waterschappen;
+- uitvoeringsorganisaties;
+- natuurorganisaties;
+- kennis- en monitoringspartners.
+
+### Waar een eerste gesprek over kan gaan
+
+- een concrete use case;
+- een verkenning of pilot;
+- aansluiting op bestaande monitoring;
+- document- en dossieranalyse;
+- randvoorwaarden voor verantwoorde inzet.
+
+### Huidig publiek kanaal
 
 - GitHub: [github.com/naturedesk](https://github.com/naturedesk)
 
-If you want this site connected to a dedicated contact mailbox or custom domain, that can be added in the next deployment step.
+Een dedicated contactadres of eigen domein kan in een volgende stap worden toegevoegd.
