@@ -4,7 +4,7 @@ This repository contains the GitHub Pages landing site for **Nature AI Governanc
 
 ## Target URL
 
-- `https://naturedesk.github.io`
+- `https://naturedesk.github.io/site`
 
 ## Local preview
 
@@ -20,13 +20,13 @@ Then open:
 
 ## Deployment notes
 
-For a GitHub user site, the repository must be named:
+For this GitHub project site, the repository is:
 
-- `naturedesk.github.io`
+- `naturedesk/site`
 
-and `_config.yml` must use:
+and `_config.yml` uses:
 
 - `url: https://naturedesk.github.io`
-- `baseurl:`
+- `baseurl: /site`
 
-The included GitHub Actions workflow can build and deploy the site automatically after the repository is created and pushed.
+The included GitHub Actions workflow can build and deploy the site automatically after the repository is pushed.

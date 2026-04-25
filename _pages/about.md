@@ -30,9 +30,9 @@ An applied lab for sovereign, explainable decision support that helps turn biodi
 **GitHub:** [github.com/naturedesk](https://github.com/naturedesk)
 
 <p>
-  <a class="btn btn-primary" href="/approach/">Explore the approach</a>
-  <a class="btn btn-outline-primary" href="/use-cases/">See use cases</a>
-  <a class="btn btn-outline-secondary" href="/contact/">Start a conversation</a>
+  <a class="btn btn-primary" href="{{ '/approach/' | relative_url }}">Explore the approach</a>
+  <a class="btn btn-outline-primary" href="{{ '/use-cases/' | relative_url }}">See use cases</a>
+  <a class="btn btn-outline-secondary" href="{{ '/contact/' | relative_url }}">Start a conversation</a>
 </p>
 
 ### What we do
