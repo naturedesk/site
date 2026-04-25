@@ -2,45 +2,92 @@
 layout: page
 title: approach
 permalink: /approach/
-description: How NatureDesk turns fragmented evidence into usable, traceable outputs.
+description: Hoe NatureDesk biodiversiteitsdata, EBV’s en beleid verbindt tot navolgbare besluitondersteuning.
 nav: true
 nav_order: 1
 ---
 
-## How the approach works
+## Hoe de aanpak werkt
 
 ![Essential Biodiversity Variables (EBVs) infographic]({{ '/assets/img/ebv-infographic-marco-bolo.png' | relative_url }})
 
-*Reference infographic: developed and designed by **MARCO-BOLO**, in collaboration with **GOOS, GEO BON & MBON**. Source: [EOVs/EBVs Infographics](https://marcobolo-project.eu/eovs-ebvs-infographics/).*
+*Referentie-infographic: ontwikkeld door **MARCO-BOLO**, in samenwerking met **GOOS, GEO BON & MBON**. Bron: [EOVs/EBVs Infographics](https://marcobolo-project.eu/eovs-ebvs-infographics/).*
 
-NatureDesk is designed as a **human-in-the-loop workflow**, not a black-box answer engine.
+NatureDesk vertrekt vanuit een eenvoudige observatie: goede besluitvorming over natuur vraagt niet alleen om data, maar om een **controleerbare keten van data naar duiding en van duiding naar besluitvorming**.
 
-### 1. Gather the relevant corpus
-We start with the documents, policies, monitoring outputs, maps, notes, and source material that actually matter for the question.
+Daarom werkt NatureDesk niet als een losstaand antwoordapparaat, maar als een stapsgewijze aanpak.
 
-### 2. Retrieve and structure the evidence
-Instead of treating all text as equal, the workflow pulls the most relevant passages, surfaces provenance, and keeps uncertainty visible.
+### 1. Verzamelen van relevante bronnen
 
-### 3. Support synthesis and drafting
-The system helps with comparisons, first analysis, and draft outputs — while keeping the supporting evidence inspectable.
+De eerste stap is het bijeenbrengen van de bronnen die er bestuurlijk en ecologisch toe doen. Denk aan:
 
-### 4. Keep judgment with practitioners
-NatureDesk is meant to support ecologists, policy teams, and governance professionals. It does not replace domain judgment or accountability.
+- biodiversiteitswaarnemingen en meetnetten;
+- monitoringsresultaten;
+- kaarten en gebiedsinformatie;
+- beleidsdocumenten en juridische kaders;
+- bestaande rapportages, notities en projectdossiers.
 
-### 5. Improve for real-world use
-The goal is not a flashy demo. The goal is a workflow that can hold up better in public, NGO, and conservation settings where traceability and defensibility matter.
+Niet alles is relevant. De kwaliteit van de uitkomst begint bij scherpe bronselectie.
 
-## What the stack is optimized for
+### 2. Van observaties naar EBV’s en indicatoren
 
-- source-linked analysis
-- explainable drafting support
-- governance-sensitive use cases
-- sovereign deployment choices where possible
-- explicit limits, assumptions, and open questions
+NatureDesk sluit aan op de logica van **Essential Biodiversity Variables (EBV’s)**.
 
-## What it is not optimized for
+Dat betekent: ruwe waarnemingen worden niet alleen verzameld, maar waar mogelijk vertaald naar een meer bruikbare informatielaag over status en trends van biodiversiteit. Zo ontstaat een brug tussen losse metingen en de indicatoren die nodig zijn voor monitoring, verantwoording en beleid.
 
-- generic chatbot behavior
-- unsupported certainty
-- hidden reasoning with no provenance
-- replacing ecological or legal expertise
+### 3. BON in a Box als open workflowlaag
+
+Voor de verwerking van biodiversiteitsdata positioneert NatureDesk **BON in a Box** als de open en reproduceerbare workflowlaag.
+
+BON in a Box helpt om data op een gestandaardiseerde manier te verwerken richting EBV’s, indicatoren en rapportage. NatureDesk bouwt daarop voort door deze uitkomsten te verbinden met beleidscontext, documentanalyse en bestuurlijke toepassing.
+
+Praktisch gezegd:
+
+- **BON in a Box** ondersteunt de stap van data naar indicatorlogica;
+- **NatureDesk** ondersteunt de stap van indicatoren en documenten naar duiding, memo’s en besluitondersteuning.
+
+### 4. Brongebonden analyse en synthese
+
+Vervolgens worden relevante passages, aannames en verschillen tussen bronnen zichtbaar gemaakt.
+
+De nadruk ligt hier op:
+
+- herkomst van informatie;
+- zichtbare onderbouwing;
+- explicitering van onzekerheid;
+- scheiding tussen feit, interpretatie en voorstel.
+
+Dit is vooral van belang in publieke contexten waarin uitkomsten uitlegbaar moeten zijn richting collega’s, bestuur, toezichthouders of externe partners.
+
+### 5. Conceptoutput voor professionals
+
+NatureDesk ondersteunt bij het opstellen van bijvoorbeeld:
+
+- memo’s;
+- beleidsnotities;
+- vergelijkingen tussen scenario’s;
+- samenvattingen van dossiers;
+- conceptteksten voor rapportages of besluitvorming.
+
+De output is bedoeld als werkversie voor professionals, niet als automatisch eindproduct.
+
+### 6. Menselijke beoordeling blijft leidend
+
+De laatste stap is altijd menselijke toetsing.
+
+Ecologen, beleidsmedewerkers en andere professionals blijven verantwoordelijk voor interpretatie, afweging en besluit. NatureDesk helpt om sneller en consistenter te werken, maar neemt die verantwoordelijkheid niet over.
+
+## Waar de aanpak op is geoptimaliseerd
+
+- navolgbare analyse;
+- bronzichtbaarheid;
+- koppeling tussen monitoring en beleid;
+- inzet in publieke en semipublieke context;
+- herbruikbare, stapsgewijze workflows.
+
+## Waar de aanpak bewust terughoudend in is
+
+- stellige conclusies zonder bronbasis;
+- generieke tekstproductie zonder dossierkennis;
+- verborgen redeneringen;
+- automatisering van professioneel oordeel.
