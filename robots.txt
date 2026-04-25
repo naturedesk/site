@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://naturedesk.github.io/site/sitemap.xml
