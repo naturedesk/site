@@ -35,26 +35,38 @@ An applied lab for sovereign, explainable decision support that helps turn biodi
   <a class="btn btn-outline-secondary" href="{{ '/contact/' | relative_url }}">Start a conversation</a>
 </p>
 
+![Essential Biodiversity Variables (EBVs) infographic]({{ '/assets/img/ebv-infographic-marco-bolo.png' | relative_url }})
+
+*Reference infographic: developed and designed by **MARCO-BOLO**, in collaboration with **GOOS, GEO BON & MBON**. Source: [EOVs/EBVs Infographics](https://marcobolo-project.eu/eovs-ebvs-infographics/).*
+
+### Vision
+
+NatureDesk exists to make **Essential Biodiversity Variables (EBVs)** usable in real public decisions. Our vision is that ecologists at municipalities and Water Boards in the Netherlands can work from the same evidence base with clearer biodiversity signals, earlier warning of ecological change, and more traceable decision support.
+
+### Mission
+
+We build practical workflows that connect biodiversity observations, indicators, policy context, and explainable AI into outputs that professionals can actually use. NatureDesk helps Dutch municipal and Water Board ecologists move from scattered monitoring data to source-linked analyses, reporting text, restoration priorities, and better-founded ecological decisions.
+
 ### What we do
 
 Nature AI Governance Lab develops and tests practical AI workflows for nature governance. We connect biodiversity monitoring, policy and legal corpora, and explainable AI methods to help practitioners move from fragmented information to well-supported outputs: from first analysis and policy comparison to draft memos, reporting text, and governance-ready decision support.
 
 ### Why it matters
 
-Nature governance rarely suffers from a total lack of data. The harder problem is turning scattered evidence into something usable, checkable, and timely. NatureDesk is built for that gap: faster first drafts, clearer provenance, and less friction between data analysis, policy interpretation, and writing.
+Nature governance rarely suffers from a total lack of data. The harder problem is turning scattered evidence into something usable, checkable, and timely. EBVs are powerful in principle, but often remain too abstract for day-to-day practice. NatureDesk is built to close that gap: turning EBV-aligned biodiversity evidence into something municipal and Water Board teams can interpret, discuss, and act on.
 
 ### Four design commitments
 
 - **Evidence first** — outputs are grounded in source documents, indicators, and explicit references.
-- **Sovereign by design** — built around European infrastructure, data governance, and auditability.
+- **EBVs into practice** — biodiversity variables should support real ecological choices, not stay trapped in framework language.
 - **For real practitioners** — designed for ecologists, policy teams, NGOs, and public institutions.
 - **Human judgment stays central** — AI assists interpretation and drafting; it does not replace expert decision-making.
 
 ### Typical outcomes
 
-- structured policy and governance comparison
-- source-linked memo and briefing drafts
-- indicator-aware reporting support
+- source-linked biodiversity and policy analysis
+- EBV-informed ecological reporting support
+- draft memos and briefings for municipalities and Water Boards
 - reusable workflows for biodiversity monitoring and decision support
 
 ### A narrow, practical stance
