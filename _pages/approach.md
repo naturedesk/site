@@ -9,6 +9,10 @@ nav_order: 1
 
 ## How the approach works
 
+![Essential Biodiversity Variables (EBVs) infographic]({{ '/assets/img/ebv-infographic-marco-bolo.png' | relative_url }})
+
+*Reference infographic: developed and designed by **MARCO-BOLO**, in collaboration with **GOOS, GEO BON & MBON**. Source: [EOVs/EBVs Infographics](https://marcobolo-project.eu/eovs-ebvs-infographics/).*
+
 NatureDesk is designed as a **human-in-the-loop workflow**, not a black-box answer engine.
 
 ### 1. Gather the relevant corpus
