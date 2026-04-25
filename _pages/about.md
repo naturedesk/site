@@ -37,7 +37,7 @@ Niet nóg een algemene chatbot, maar een werkwijze voor dossiers waarin herkomst
   <a class="btn btn-outline-secondary" href="{{ '/contact/' | relative_url }}">Neem contact op</a>
 </p>
 
-![Essential Biodiversity Variables (EBVs) infographic]({{ '/assets/img/ebv-infographic-marco-bolo.png' | relative_url }})
+![NatureDesk infographic]({{ '/assets/img/ebv-infographic-updated.jpg' | relative_url }})
 
 *Referentie-infographic: ontwikkeld door **MARCO-BOLO**, in samenwerking met **GOOS, GEO BON & MBON**. Bron: [EOVs/EBVs Infographics](https://marcobolo-project.eu/eovs-ebvs-infographics/).*
 

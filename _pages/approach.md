@@ -9,7 +9,7 @@ nav_order: 1
 
 ## Hoe de aanpak werkt
 
-![Essential Biodiversity Variables (EBVs) infographic]({{ '/assets/img/ebv-infographic-marco-bolo.png' | relative_url }})
+![NatureDesk infographic]({{ '/assets/img/ebv-infographic-updated.jpg' | relative_url }})
 
 *Referentie-infographic: ontwikkeld door **MARCO-BOLO**, in samenwerking met **GOOS, GEO BON & MBON**. Bron: [EOVs/EBVs Infographics](https://marcobolo-project.eu/eovs-ebvs-infographics/).*
 
