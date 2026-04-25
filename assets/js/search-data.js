@@ -11,7 +11,7 @@ ninja.data = [{
     },
   },{id: "nav-approach",
           title: "approach",
-          description: "How NatureDesk turns fragmented evidence into usable, traceable outputs.",
+          description: "Hoe NatureDesk biodiversiteitsdata, EBV’s en beleid verbindt tot navolgbare besluitondersteuning.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/site/approach/";
