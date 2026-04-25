@@ -25,7 +25,7 @@ ninja.data = [{
           },
         },{id: "nav-contact",
           title: "contact",
-          description: "Start a conversation about pilots, partnerships, and governance-ready workflows.",
+          description: "Verken een pilot of samenwerking rond biodiversiteitsmonitoring, EBV’s en navolgbare AI-ondersteuning.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/site/contact/";
