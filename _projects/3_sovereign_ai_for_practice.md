@@ -2,7 +2,7 @@
 layout: page
 title: Sovereign AI for nature practice
 description: Explore explainable, governance-aware AI workflows without defaulting to generic black-box tooling.
-img: assets/img/naturedesk-logo.jpg
+img: assets/img/naturedesk-logo-20260425.jpg
 importance: 3
 ---
 

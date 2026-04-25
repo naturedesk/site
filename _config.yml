@@ -14,7 +14,7 @@ footer_text: >
   NatureDesk uses <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with the <a href="https://github.com/alshedivat/al-folio" target="_blank">al-folio</a> theme and is intended for deployment on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 keywords: nature governance, biodiversity monitoring, explainable ai, sovereign ai, policy analysis, naturedesk # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: naturedesk-logo.jpg # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: naturedesk-logo-20260425.jpg # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://naturedesk.github.io # the base hostname & protocol for your site
 baseurl: /site # the subpath of your site, e.g. /blog/. Leave blank for root
@@ -68,7 +68,7 @@ max_width: 930px
 # see https://schema.org/docs/faq.html for more information
 serve_og_meta: true # Include Open Graph meta tags in the HTML head
 serve_schema_org: true # Include Schema.org in the HTML head
-og_image: assets/img/naturedesk-bon-tree-avatar.jpg # The site-wide (default for all links) Open Graph preview image
+og_image: assets/img/naturedesk-avatar-20260425.jpg # The site-wide (default for all links) Open Graph preview image
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification

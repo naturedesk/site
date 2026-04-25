@@ -6,7 +6,7 @@ subtitle: Nature AI Governance Lab • navolgbare AI voor natuurbeleid en biodiv
 
 profile:
   align: right
-  image: naturedesk-bon-tree-avatar.jpg
+  image: naturedesk-avatar-20260425.jpg
   image_circular: false
   more_info: >
     <p>NatureDesk</p>

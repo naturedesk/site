@@ -2,7 +2,7 @@
 layout: page
 title: Monitoring to reporting workflows
 description: Connect biodiversity monitoring outputs and indicators to reporting and interpretation work.
-img: assets/img/naturedesk-bon-tree-avatar.jpg
+img: assets/img/naturedesk-avatar-20260425.jpg
 importance: 2
 ---
 
