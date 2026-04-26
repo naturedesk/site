@@ -2,7 +2,7 @@
 layout: page
 title: South Holland lighthouse use case
 description: Evidence support for South Holland water governance, drinkwater security, PFAS pressure, and biodiversity-relevant system stress.
-img: assets/img/naturedesk-boss-avatar.png
+img: assets/img/south-holland-lighthouse-logo-20260426.jpg
 importance: 3
 ---
 
