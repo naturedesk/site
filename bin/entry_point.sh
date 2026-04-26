@@ -5,22 +5,17 @@ echo "Entry point script running"
 
 CONFIG_FILE=_config.yml
 
-# Function to manage Gemfile.lock
+# Keep Gemfile.lock intact. This repo's Docker build depends on it even though
+# the file may be git-ignored locally.
 manage_gemfile_lock() {
-    git config --global --add safe.directory '*'
-    if command -v git &> /dev/null && [ -f Gemfile.lock ]; then
-        if git ls-files --error-unmatch Gemfile.lock &> /dev/null; then
-            echo "Gemfile.lock is tracked by git, keeping it intact"
-            git restore Gemfile.lock 2>/dev/null || true
-        else
-            echo "Gemfile.lock is not tracked by git, removing it"
-            rm Gemfile.lock
-        fi
+    if [ -f Gemfile.lock ]; then
+        echo "Gemfile.lock present; keeping it intact"
     fi
 }
 
 start_jekyll() {
     manage_gemfile_lock
+    bundle check >/dev/null 2>&1 || bundle install
     bundle exec jekyll serve --watch --port=8080 --host=0.0.0.0 --livereload --verbose --trace --force_polling &
 }
 

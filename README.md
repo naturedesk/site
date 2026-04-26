@@ -11,12 +11,29 @@ This repository contains the GitHub Pages landing site for **Nature AI Governanc
 Using Docker:
 
 ```bash
-docker compose -f docker-compose-slim.yml up
+bin/serve-local
 ```
 
-Then open:
+Default local URL:
 
-- `http://localhost:8080`
+- `http://localhost:8081`
+
+Notes:
+- this path builds the repo's own Docker image locally, so it works on **arm64** hosts like Spark as well as amd64 hosts
+- default preview port is `8081` to avoid common `8080` collisions
+- override ports if needed, for example:
+
+```bash
+JEKYLL_HOST_PORT=8090 JEKYLL_LIVERELOAD_PORT=35731 bin/serve-local
+```
+
+## Local build only
+
+```bash
+bin/build-local
+```
+
+This runs a one-shot Jekyll build inside the local Docker image and writes the output to `_site/`.
 
 ## Deployment notes
 

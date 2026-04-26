@@ -1,11 +1,11 @@
-# this file uses prebuilt image in dockerhub
+# local Jekyll preview using a repo-built image so it works on arm64 as well as amd64
 services:
   jekyll:
-    image: amirpourmand/al-folio:slim
-    #build: .
+    image: naturedesk-jekyll-local
+    build: .
     ports:
-      - 8080:8080
-      - 35729:35729
+      - "${JEKYLL_HOST_PORT:-8081}:8080"
+      - "${JEKYLL_LIVERELOAD_PORT:-35730}:35729"
     volumes:
       - .:/srv/jekyll
     environment:
