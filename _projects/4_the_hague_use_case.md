@@ -2,7 +2,7 @@
 layout: page
 title: The Hague use case
 description: A municipal biodiversity monitoring and governance route built around Groenmonitor, stadsnatuur themes, and inspectable public evidence surfaces.
-img: assets/img/naturedesk-avatar-20260425.jpg
+img: assets/img/the-hague-biodiversity-logo-20260426.jpg
 importance: 4
 ---
 
