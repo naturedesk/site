@@ -19,6 +19,7 @@ Default local URL:
 - `http://localhost:8081`
 
 Notes:
+
 - this path builds the repo's own Docker image locally, so it works on **arm64** hosts like Spark as well as amd64 hosts
 - default preview port is `8081` to avoid common `8080` collisions
 - override ports if needed, for example:
