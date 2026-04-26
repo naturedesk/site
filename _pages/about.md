@@ -39,7 +39,7 @@ Niet nóg een algemene chatbot, maar een werkwijze voor dossiers waarin herkomst
 
 ![NatureDesk infographic]({{ '/assets/img/ebv-infographic-updated.jpg' | relative_url }})
 
-*Referentie-infographic: ontwikkeld door **MARCO-BOLO**, in samenwerking met **GOOS, GEO BON & MBON**. Bron: [EOVs/EBVs Infographics](https://marcobolo-project.eu/eovs-ebvs-infographics/).*
+*NatureDesk house-style infographic, gebaseerd op de **MARCO-BOLO** EOVs/EBVs infographic en ontwikkeld in relatie tot **GOOS, GEO BON & MBON**. Bronconcept: [EOVs/EBVs Infographics](https://marcobolo-project.eu/eovs-ebvs-infographics/).*
 
 ### Waarom NatureDesk
 

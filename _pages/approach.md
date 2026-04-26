@@ -11,7 +11,7 @@ nav_order: 1
 
 ![NatureDesk infographic]({{ '/assets/img/ebv-infographic-updated.jpg' | relative_url }})
 
-*Referentie-infographic: ontwikkeld door **MARCO-BOLO**, in samenwerking met **GOOS, GEO BON & MBON**. Bron: [EOVs/EBVs Infographics](https://marcobolo-project.eu/eovs-ebvs-infographics/).*
+*NatureDesk house-style infographic, gebaseerd op de **MARCO-BOLO** EOVs/EBVs infographic en ontwikkeld in relatie tot **GOOS, GEO BON & MBON**. Bronconcept: [EOVs/EBVs Infographics](https://marcobolo-project.eu/eovs-ebvs-infographics/).*
 
 NatureDesk vertrekt vanuit een eenvoudige observatie: goede besluitvorming over natuur vraagt niet alleen om data, maar om een **controleerbare keten van data naar duiding en van duiding naar besluitvorming**.
 
