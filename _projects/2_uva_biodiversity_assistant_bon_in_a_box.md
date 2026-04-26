@@ -2,7 +2,7 @@
 layout: page
 title: Help us build an LLM-powered biodiversity assistant for ecologists using BON in a Box
 description: A UvA challenge to prototype a front-end and LLM assistant that helps ecologists work with BON in a Box more easily.
-img: assets/img/naturedesk-bon-tree-avatar.jpg
+img: assets/img/bon-in-a-box-assistant-logo-20260426.jpg
 importance: 2
 ---
 
