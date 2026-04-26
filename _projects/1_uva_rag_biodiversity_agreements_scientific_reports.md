@@ -2,7 +2,7 @@
 layout: page
 title: RAG for international biodiversity agreements & scientific reports
 description: A UvA challenge focused on improving searchability and source-grounded retrieval across IUCN resolutions and related biodiversity-policy material.
-img: assets/img/naturedesk-logo-20260425.jpg
+img: assets/img/biodiversity-agreements-rag-logo-20260426.png
 importance: 1
 ---
 
