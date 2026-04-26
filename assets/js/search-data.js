@@ -46,21 +46,26 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{id: "projects-policy-and-governance-synthesis",
-          title: 'Policy and governance synthesis',
-          description: "Turn policy documents, governance materials, and project evidence into usable first analyses.",
+          section: "News",},{id: "projects-rag-for-international-biodiversity-agreements-amp-scientific-reports",
+          title: 'RAG for international biodiversity agreements &amp;amp; scientific reports',
+          description: "A UvA challenge focused on improving searchability and source-grounded retrieval across IUCN resolutions and related biodiversity-policy material.",
           section: "Projects",handler: () => {
-              window.location.href = "/site/projects/1_nature_governance_synthesis/";
-            },},{id: "projects-monitoring-to-reporting-workflows",
-          title: 'Monitoring to reporting workflows',
-          description: "Connect biodiversity monitoring outputs and indicators to reporting and interpretation work.",
+              window.location.href = "/site/projects/1_uva_rag_biodiversity_agreements_scientific_reports/";
+            },},{id: "projects-help-us-build-an-llm-powered-biodiversity-assistant-for-ecologists-using-bon-in-a-box",
+          title: 'Help us build an LLM-powered biodiversity assistant for ecologists using BON in a...',
+          description: "A UvA challenge to prototype a front-end and LLM assistant that helps ecologists work with BON in a Box more easily.",
           section: "Projects",handler: () => {
-              window.location.href = "/site/projects/2_monitoring_to_reporting/";
-            },},{id: "projects-sovereign-ai-for-nature-practice",
-          title: 'Sovereign AI for nature practice',
-          description: "Explore explainable, governance-aware AI workflows without defaulting to generic black-box tooling.",
+              window.location.href = "/site/projects/2_uva_biodiversity_assistant_bon_in_a_box/";
+            },},{id: "projects-south-holland-lighthouse-use-case",
+          title: 'South Holland lighthouse use case',
+          description: "Evidence support for South Holland water governance, drinkwater security, PFAS pressure, and biodiversity-relevant system stress.",
           section: "Projects",handler: () => {
-              window.location.href = "/site/projects/3_sovereign_ai_for_practice/";
+              window.location.href = "/site/projects/3_south_holland_lighthouse_use_case/";
+            },},{id: "projects-the-hague-use-case",
+          title: 'The Hague use case',
+          description: "A municipal biodiversity monitoring and governance route built around Groenmonitor, stadsnatuur themes, and inspectable public evidence surfaces.",
+          section: "Projects",handler: () => {
+              window.location.href = "/site/projects/4_the_hague_use_case/";
             },},{id: "teachings-data-science-fundamentals",
           title: 'Data Science Fundamentals',
           description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
