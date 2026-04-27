@@ -2,44 +2,44 @@
 layout: page
 title: contact
 permalink: /contact/
-description: Verken een pilot of samenwerking rond biodiversiteitsmonitoring, EBV’s en navolgbare AI-ondersteuning.
+description: Explore a pilot or collaboration around biodiversity monitoring, EBVs, and traceable AI support.
 nav: true
 nav_order: 3
 ---
 
-## Start een verkenning
+## Start an exploration
 
-NatureDesk richt zich op zorgvuldige, praktische ondersteuning bij biodiversiteitsmonitoring, documentanalyse en besluitvorming in de publieke en semipublieke context.
+NatureDesk focuses on careful, practical support for biodiversity monitoring, document analysis, and decision-making in public and semi-public contexts.
 
-### Redenen om contact op te nemen
+### Reasons to get in touch
 
-- u wilt verkennen hoe biodiversiteitsdata, EBV’s en beleidsinformatie beter kunnen samenkomen;
-- u werkt aan een pilot rond natuurbeleid, gebiedsgericht werken of monitoring;
-- u zoekt een navolgbare werkwijze voor memo’s, analyses of rapportages;
-- u wilt AI alleen inzetten als broncontrole, uitlegbaarheid en bestuurlijke betrouwbaarheid voldoende zijn geborgd;
-- u wilt BON in a Box en NatureDesk in samenhang bekijken: van dataworkflow tot besluitondersteuning.
+- you want to explore how biodiversity data, EBVs, and policy information can come together more effectively;
+- you are working on a pilot around nature policy, area-based work, or monitoring;
+- you are looking for a traceable way of working for memos, analyses, or reports;
+- you only want to use AI when source control, explainability, and administrative reliability are sufficiently safeguarded;
+- you want to consider BON in a Box and NatureDesk together: from data workflow to decision support.
 
-### Geschikte contexten
+### Suitable contexts
 
-NatureDesk is met name relevant voor:
+NatureDesk is especially relevant for:
 
-- gemeenten;
-- provincies;
-- waterschappen;
-- uitvoeringsorganisaties;
-- natuurorganisaties;
-- kennis- en monitoringspartners.
+- municipalities;
+- provinces;
+- water authorities;
+- implementation agencies;
+- nature organisations;
+- knowledge and monitoring partners.
 
-### Waar een eerste gesprek over kan gaan
+### What a first conversation can cover
 
-- een concrete use case;
-- een verkenning of pilot;
-- aansluiting op bestaande monitoring;
-- document- en dossieranalyse;
-- randvoorwaarden voor verantwoorde inzet.
+- a concrete use case;
+- an exploration or pilot;
+- connection to existing monitoring;
+- document and dossier analysis;
+- preconditions for responsible use.
 
-### Huidig publiek kanaal
+### Current public channel
 
 - GitHub: [github.com/naturedesk](https://github.com/naturedesk)
 
-Een dedicated contactadres of eigen domein kan in een volgende stap worden toegevoegd.
+A dedicated contact address or separate domain can be added in a next step.

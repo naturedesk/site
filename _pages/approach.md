@@ -2,92 +2,92 @@
 layout: page
 title: approach
 permalink: /approach/
-description: Hoe NatureDesk biodiversiteitsdata, EBV’s en beleid verbindt tot navolgbare besluitondersteuning.
+description: How NatureDesk connects biodiversity data, EBVs, and policy into traceable decision support.
 nav: true
 nav_order: 1
 ---
 
-## Hoe de aanpak werkt
+## How the approach works
 
 ![NatureDesk infographic]({{ '/assets/img/ebv-infographic-updated.jpg' | relative_url }})
 
-_NatureDesk house-style infographic, gebaseerd op de **MARCO-BOLO** EOVs/EBVs infographic en ontwikkeld in relatie tot **GOOS, GEO BON & MBON**. Bronconcept: [EOVs/EBVs Infographics](https://marcobolo-project.eu/eovs-ebvs-infographics/)._
+_NatureDesk house-style infographic, based on the **MARCO-BOLO** EOVs/EBVs infographic and developed in relation to **GOOS, GEO BON & MBON**. Source concept: [EOVs/EBVs Infographics](https://marcobolo-project.eu/eovs-ebvs-infographics/)._
 
-NatureDesk vertrekt vanuit een eenvoudige observatie: goede besluitvorming over natuur vraagt niet alleen om data, maar om een **controleerbare keten van data naar duiding en van duiding naar besluitvorming**.
+NatureDesk starts from a simple observation: good decision-making about nature requires not only data, but a **verifiable chain from data to interpretation and from interpretation to decision-making**.
 
-Daarom werkt NatureDesk niet als een losstaand antwoordapparaat, maar als een stapsgewijze aanpak.
+That is why NatureDesk does not work as a standalone answer machine, but as a step-by-step approach.
 
-### 1. Verzamelen van relevante bronnen
+### 1. Collecting relevant sources
 
-De eerste stap is het bijeenbrengen van de bronnen die er bestuurlijk en ecologisch toe doen. Denk aan:
+The first step is to bring together the sources that matter administratively and ecologically. These may include:
 
-- biodiversiteitswaarnemingen en meetnetten;
-- monitoringsresultaten;
-- kaarten en gebiedsinformatie;
-- beleidsdocumenten en juridische kaders;
-- bestaande rapportages, notities en projectdossiers.
+- biodiversity observations and monitoring networks;
+- monitoring results;
+- maps and area information;
+- policy documents and legal frameworks;
+- existing reports, notes, and project dossiers.
 
-Niet alles is relevant. De kwaliteit van de uitkomst begint bij scherpe bronselectie.
+Not everything is relevant. The quality of the outcome starts with sharp source selection.
 
-### 2. Van observaties naar EBV’s en indicatoren
+### 2. From observations to EBVs and indicators
 
-NatureDesk sluit aan op de logica van **Essential Biodiversity Variables (EBV’s)**.
+NatureDesk aligns with the logic of **Essential Biodiversity Variables (EBVs)**.
 
-Dat betekent: ruwe waarnemingen worden niet alleen verzameld, maar waar mogelijk vertaald naar een meer bruikbare informatielaag over status en trends van biodiversiteit. Zo ontstaat een brug tussen losse metingen en de indicatoren die nodig zijn voor monitoring, verantwoording en beleid.
+This means that raw observations are not only collected, but, where possible, translated into a more useful information layer about the status and trends of biodiversity. This creates a bridge between individual measurements and the indicators needed for monitoring, accountability, and policy.
 
-### 3. BON in a Box als open workflowlaag
+### 3. BON in a Box as an open workflow layer
 
-Voor de verwerking van biodiversiteitsdata positioneert NatureDesk **BON in a Box** als de open en reproduceerbare workflowlaag.
+For biodiversity-data processing, NatureDesk positions **BON in a Box** as the open and reproducible workflow layer.
 
-BON in a Box helpt om data op een gestandaardiseerde manier te verwerken richting EBV’s, indicatoren en rapportage. NatureDesk bouwt daarop voort door deze uitkomsten te verbinden met beleidscontext, documentanalyse en bestuurlijke toepassing.
+BON in a Box helps process data in a standardised way towards EBVs, indicators, and reporting. NatureDesk builds on this by connecting those outputs to policy context, document analysis, and administrative use.
 
-Praktisch gezegd:
+In practical terms:
 
-- **BON in a Box** ondersteunt de stap van data naar indicatorlogica;
-- **NatureDesk** ondersteunt de stap van indicatoren en documenten naar duiding, memo’s en besluitondersteuning.
+- **BON in a Box** supports the step from data to indicator logic;
+- **NatureDesk** supports the step from indicators and documents to interpretation, memos, and decision support.
 
-### 4. Brongebonden analyse en synthese
+### 4. Source-grounded analysis and synthesis
 
-Vervolgens worden relevante passages, aannames en verschillen tussen bronnen zichtbaar gemaakt.
+Next, relevant passages, assumptions, and differences between sources are made visible.
 
-De nadruk ligt hier op:
+The emphasis is on:
 
-- herkomst van informatie;
-- zichtbare onderbouwing;
-- explicitering van onzekerheid;
-- scheiding tussen feit, interpretatie en voorstel.
+- provenance of information;
+- visible substantiation;
+- explicit uncertainty;
+- separation between fact, interpretation, and proposal.
 
-Dit is vooral van belang in publieke contexten waarin uitkomsten uitlegbaar moeten zijn richting collega’s, bestuur, toezichthouders of externe partners.
+This is especially important in public contexts where outcomes must be explainable to colleagues, administrators, regulators, or external partners.
 
-### 5. Conceptoutput voor professionals
+### 5. Draft output for professionals
 
-NatureDesk ondersteunt bij het opstellen van bijvoorbeeld:
+NatureDesk supports the drafting of, for example:
 
-- memo’s;
-- beleidsnotities;
-- vergelijkingen tussen scenario’s;
-- samenvattingen van dossiers;
-- conceptteksten voor rapportages of besluitvorming.
+- memos;
+- policy notes;
+- comparisons between scenarios;
+- dossier summaries;
+- draft text for reports or decision-making.
 
-De output is bedoeld als werkversie voor professionals, niet als automatisch eindproduct.
+The output is intended as a working version for professionals, not as an automatic final product.
 
-### 6. Menselijke beoordeling blijft leidend
+### 6. Human review remains leading
 
-De laatste stap is altijd menselijke toetsing.
+The final step is always human review.
 
-Ecologen, beleidsmedewerkers en andere professionals blijven verantwoordelijk voor interpretatie, afweging en besluit. NatureDesk helpt om sneller en consistenter te werken, maar neemt die verantwoordelijkheid niet over.
+Ecologists, policy officers, and other professionals remain responsible for interpretation, weighing trade-offs, and decisions. NatureDesk helps them work faster and more consistently, but does not take over that responsibility.
 
-## Waar de aanpak op is geoptimaliseerd
+## What the approach is optimised for
 
-- navolgbare analyse;
-- bronzichtbaarheid;
-- koppeling tussen monitoring en beleid;
-- inzet in publieke en semipublieke context;
-- herbruikbare, stapsgewijze workflows.
+- traceable analysis;
+- source visibility;
+- connecting monitoring and policy;
+- use in public and semi-public contexts;
+- reusable, step-by-step workflows.
 
-## Waar de aanpak bewust terughoudend in is
+## Where the approach is deliberately cautious
 
-- stellige conclusies zonder bronbasis;
-- generieke tekstproductie zonder dossierkennis;
-- verborgen redeneringen;
-- automatisering van professioneel oordeel.
+- firm conclusions without a source basis;
+- generic text production without dossier knowledge;
+- hidden reasoning;
+- automation of professional judgment.

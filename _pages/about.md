@@ -2,7 +2,7 @@
 layout: about
 title: home
 permalink: /
-subtitle: Nature AI Governance Lab • navolgbare AI voor natuurbeleid en biodiversiteitsmonitoring
+subtitle: Nature AI Governance Lab • traceable AI for nature policy and biodiversity monitoring
 
 profile:
   align: right
@@ -23,83 +23,83 @@ latest_posts:
   enabled: false
 ---
 
-## NatureDesk: van biodiversiteitsdata naar beter onderbouwde besluiten
+## NatureDesk: from biodiversity data to better-founded decisions
 
-NatureDesk is een praktische werkomgeving voor overheden en natuurorganisaties die biodiversiteitsdata, beleidskaders en monitoringsinformatie willen omzetten in bruikbare, controleerbare en uitlegbare besluitondersteuning.
+NatureDesk is a practical workspace for public authorities and nature organisations that want to turn biodiversity data, policy frameworks, and monitoring information into useful, verifiable, and explainable decision support.
 
-Niet nóg een algemene chatbot, maar een werkwijze voor dossiers waarin herkomst, onderbouwing en bestuurlijke betrouwbaarheid centraal staan.
+It is not yet another general chatbot. It is a way of working with dossiers where provenance, evidence, and administrative reliability are central.
 
 **GitHub:** [github.com/naturedesk](https://github.com/naturedesk)
 
 <p>
-  <a class="btn btn-primary" href="{{ '/approach/' | relative_url }}">Bekijk de aanpak</a>
-  <a class="btn btn-outline-primary" href="{{ '/use-cases/' | relative_url }}">Bekijk toepassingen</a>
-  <a class="btn btn-outline-secondary" href="{{ '/contact/' | relative_url }}">Neem contact op</a>
+  <a class="btn btn-primary" href="{{ '/approach/' | relative_url }}">See the approach</a>
+  <a class="btn btn-outline-primary" href="{{ '/use-cases/' | relative_url }}">See use cases</a>
+  <a class="btn btn-outline-secondary" href="{{ '/contact/' | relative_url }}">Contact us</a>
 </p>
 
 ![NatureDesk infographic]({{ '/assets/img/ebv-infographic-updated.jpg' | relative_url }})
 
-_NatureDesk house-style infographic, gebaseerd op de **MARCO-BOLO** EOVs/EBVs infographic en ontwikkeld in relatie tot **GOOS, GEO BON & MBON**. Bronconcept: [EOVs/EBVs Infographics](https://marcobolo-project.eu/eovs-ebvs-infographics/)._
+_NatureDesk house-style infographic, based on the **MARCO-BOLO** EOVs/EBVs infographic and developed in relation to **GOOS, GEO BON & MBON**. Source concept: [EOVs/EBVs Infographics](https://marcobolo-project.eu/eovs-ebvs-infographics/)._
 
-### Waarom NatureDesk
+### Why NatureDesk
 
-Veel publieke organisaties hebben niet per se te weinig informatie, maar juist te veel losse informatie.
+Many public organisations do not necessarily have too little information. They often have too much fragmented information.
 
-Biodiversiteitsdata zitten verspreid over meetnetten, rapportages, kaarten, beleidsteksten, vergunningdossiers en projectdocumenten. Daardoor kost het veel tijd om tot een consistent beeld te komen van:
+Biodiversity data are spread across monitoring networks, reports, maps, policy texts, permit dossiers, and project documents. As a result, it takes a lot of time to build a consistent picture of:
 
-- wat er ecologisch gebeurt;
-- welke indicatoren relevant zijn;
-- welke beleidsruimte er is;
-- en welke conclusie bestuurlijk verdedigbaar is.
+- what is happening ecologically;
+- which indicators are relevant;
+- which policy room exists;
+- and which conclusion is administratively defensible.
 
-NatureDesk is ontwikkeld om die stap kleiner te maken.
+NatureDesk was developed to make that step smaller.
 
-### Waar NatureDesk op is gericht
+### What NatureDesk focuses on
 
-NatureDesk helpt om:
+NatureDesk helps to:
 
-- biodiversiteitswaarnemingen en monitoringsdata te verbinden aan **Essential Biodiversity Variables (EBV’s)**;
-- documenten en beleidskaders terug te brengen tot relevante, controleerbare passages;
-- analyses, memo’s en conceptteksten op te stellen met zichtbare bronverwijzing;
-- sneller te werken zonder de inhoudelijke verantwoordelijkheid uit handen te geven.
+- connect biodiversity observations and monitoring data to **Essential Biodiversity Variables (EBVs)**;
+- reduce documents and policy frameworks to relevant, verifiable passages;
+- draft analyses, memos, and concept texts with visible source references;
+- work faster without handing over substantive responsibility.
 
-### Voor wie
+### Who it is for
 
-NatureDesk is in het bijzonder relevant voor:
+NatureDesk is especially relevant for:
 
-- gemeenten;
-- provincies;
-- waterschappen;
-- uitvoeringsorganisaties;
-- terreinbeherende organisaties;
-- natuur- en kennisinstellingen.
+- municipalities;
+- provinces;
+- water authorities;
+- implementation agencies;
+- land-management organisations;
+- nature and knowledge institutions.
 
-### Wat NatureDesk nadrukkelijk wel is
+### What NatureDesk explicitly is
 
-- een **human-in-the-loop** werkwijze;
-- een hulpmiddel voor **navolgbare analyse en dossiervorming**;
-- een brug tussen biodiversiteitsmonitoring, indicatoren, beleid en bestuurlijke besluitvorming;
-- een omgeving waarin **soevereiniteit, uitlegbaarheid en broncontrole** belangrijk zijn.
+- a **human-in-the-loop** way of working;
+- a tool for **traceable analysis and dossier-building**;
+- a bridge between biodiversity monitoring, indicators, policy, and administrative decision-making;
+- an environment where **sovereignty, explainability, and source control** matter.
 
-### Wat NatureDesk nadrukkelijk niet is
+### What NatureDesk explicitly is not
 
-- geen black-box die zelfstandig beleid maakt;
-- geen vervanging van ecologische expertise;
-- geen systeem dat zekerheid suggereert waar onzekerheid hoort te blijven bestaan;
-- geen generieke AI-laag zonder kennis van context of bron.
+- not a black box that makes policy independently;
+- not a replacement for ecological expertise;
+- not a system that suggests certainty where uncertainty should remain visible;
+- not a generic AI layer without knowledge of context or sources.
 
 ---
 
-### Kernvragen
+### Core questions
 
-**Wat is NatureDesk?**  
-Een praktische aanpak voor organisaties die biodiversiteitsinformatie en beleid sneller willen analyseren en vertalen naar bruikbare, controleerbare output.
+**What is NatureDesk?**  
+A practical approach for organisations that want to analyse biodiversity information and policy faster and translate it into useful, verifiable output.
 
-**Wat maakt het anders dan een gewone AI-chatbot?**  
-NatureDesk richt zich op brongebonden werken, uitlegbaarheid en bestuurlijke toepasbaarheid, niet op losse tekstproductie.
+**What makes it different from an ordinary AI chatbot?**  
+NatureDesk focuses on source-grounded work, explainability, and administrative applicability, not loose text production.
 
-**Vervangt NatureDesk de professional?**  
-Nee. Het ondersteunt de professional bij selectie, synthese en structurering van informatie.
+**Does NatureDesk replace the professional?**  
+No. It supports professionals in selecting, synthesising, and structuring information.
 
-**Waar zit de meerwaarde voor de publieke sector?**  
-In dossiers waar tijdsdruk hoog is en onderbouwing essentieel: monitoring, beleidsvoorbereiding, rapportage, prioritering en besluitvorming.
+**Where is the added value for the public sector?**  
+In dossiers where time pressure is high and substantiation is essential: monitoring, policy preparation, reporting, prioritisation, and decision-making.
