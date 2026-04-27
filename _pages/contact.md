@@ -42,4 +42,4 @@ NatureDesk is especially relevant for:
 
 - GitHub: [github.com/naturedesk](https://github.com/naturedesk)
 
-A dedicated contact address or separate domain can be added in a next step.
+Contact email: [hans@naturedesk.org](mailto:hans@naturedesk.org)
