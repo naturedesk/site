@@ -11,7 +11,7 @@ ninja.data = [{
     },
   },{id: "nav-approach",
           title: "approach",
-          description: "Hoe NatureDesk biodiversiteitsdata, EBV’s en beleid verbindt tot navolgbare besluitondersteuning.",
+          description: "How NatureDesk connects biodiversity data, EBVs, and policy into traceable decision support.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/site/approach/";
@@ -25,7 +25,7 @@ ninja.data = [{
           },
         },{id: "nav-contact",
           title: "contact",
-          description: "Verken een pilot of samenwerking rond biodiversiteitsmonitoring, EBV’s en navolgbare AI-ondersteuning.",
+          description: "Explore a pilot or collaboration around biodiversity monitoring, EBVs, and traceable AI support.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/site/contact/";
