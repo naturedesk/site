@@ -1,0 +1,14 @@
+# No NatureDesk-local runner patch is currently required.
+#
+# On 2026-05-06 the Spark runner Docker definitions in the local
+# bon-in-a-box-pipelines checkout were realigned to upstream
+# GEO-BON/bon-in-a-box-pipelines origin/main for:
+# - runners/conda/conda-dockerfile
+# - runners/conda/r-environment.yml
+# - runners/julia/julia-dockerfile
+# - .github/workflows/docker_runner-conda.yml
+# - .github/workflows/docker_runner-julia.yml
+# - .github/workflows/onPush.yml
+#
+# Keep this file as an explicit placeholder so students know that the runner
+# alignment is intentional rather than missing from the package.

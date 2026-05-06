@@ -1,0 +1,5 @@
+services:
+  python-api:
+    build:
+      args:
+        TITILER_VERSION: 2.0.1
