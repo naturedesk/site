@@ -1,0 +1,6 @@
+services:
+  runner-conda:
+    image: ndforge/conda-diagnostic:arm64-r-extra-py
+
+  runner-julia:
+    image: ndforge/julia-diagnostic:arm64-full

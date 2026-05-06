@@ -1,0 +1,205 @@
+diff --git a/compose.yml b/compose.yml
+index 2033790..72fe168 100644
+--- a/compose.yml
++++ b/compose.yml
+@@ -19,6 +19,8 @@ services:
+     env_file:
+       - ${PIPELINE_REPO_PATH}/runner.env
+     environment:
++      MY_UID: ${MY_UID}
++      DOCKER_GID: ${DOCKER_GID}
+       SCRIPT_LOCATION: /scripts
+       SCRIPT_STUBS_LOCATION: /script-stubs
+       USERDATA_LOCATION: /userdata
+@@ -99,4 +101,4 @@ secrets:
+   hpc_known_hosts_file:
+     file: $HPC_KNOWN_HOSTS_FILE
+   hpc_ssh_config_file:
+-    file: $HPC_SSH_CONFIG_FILE
+\ No newline at end of file
++    file: $HPC_SSH_CONFIG_FILE
+diff --git a/http-proxy/conf.d-prod/ngnix.conf b/http-proxy/conf.d-prod/ngnix.conf
+index aca834e..1b62874 100644
+--- a/http-proxy/conf.d-prod/ngnix.conf
++++ b/http-proxy/conf.d-prod/ngnix.conf
+@@ -14,11 +14,6 @@ server {
+         add_header Access-Control-Allow-Origin *;
+     }
+ 
+-    location /scripts/ {
+-        root /static/;
+-        add_header Access-Control-Allow-Origin *;
+-    }
+-
+     location /pipeline/ {
+         proxy_pass http://biab-script-server:8080/pipeline/;
+         add_header Access-Control-Allow-Origin *;
+@@ -40,6 +35,36 @@ server {
+         proxy_pass http://biab-python-api:8001/region/;
+     }
+ 
++    location /pipeline-form {
++        index index.html index.htm;
++        try_files /ui$uri /ui/index.html =404;
++        add_header Access-Control-Allow-Origin *;
++    }
++
++    location /script-form {
++        index index.html index.htm;
++        try_files /ui$uri /ui/index.html =404;
++        add_header Access-Control-Allow-Origin *;
++    }
++
++    location /history {
++        index index.html index.htm;
++        try_files /ui$uri /ui/index.html =404;
++        add_header Access-Control-Allow-Origin *;
++    }
++
++    location /info {
++        index index.html index.htm;
++        try_files /ui$uri /ui/index.html =404;
++        add_header Access-Control-Allow-Origin *;
++    }
++
++    location /pipeline-editor {
++        index index.html index.htm;
++        try_files /ui$uri /ui/index.html =404;
++        add_header Access-Control-Allow-Origin *;
++    }
++
+     location /output/ {
+         root /static/;
+         add_header Access-Control-Allow-Origin *;
+diff --git a/http-proxy/conf.d/ngnix.conf b/http-proxy/conf.d/ngnix.conf
+index 36c1129..4d27583 100644
+--- a/http-proxy/conf.d/ngnix.conf
++++ b/http-proxy/conf.d/ngnix.conf
+@@ -14,11 +14,6 @@ server {
+         add_header Access-Control-Allow-Origin *;
+     }
+ 
+-    location /scripts/ {
+-        root /static/;
+-        add_header Access-Control-Allow-Origin *;
+-    }
+-
+     location /pipeline/ {
+         proxy_pass http://biab-script-server:8080/pipeline/;
+         add_header Access-Control-Allow-Origin *;
+@@ -45,6 +40,46 @@ server {
+         proxy_pass http://biab-python-api:8001/region/;
+     }
+ 
++    location /pipeline-form {
++        proxy_pass http://biab-ui:3000/pipeline-form;
++        proxy_http_version 1.1;
++        proxy_set_header Upgrade $http_upgrade;
++        proxy_set_header Connection "upgrade";
++        add_header Access-Control-Allow-Origin *;
++    }
++
++    location /script-form {
++        proxy_pass http://biab-ui:3000/script-form;
++        proxy_http_version 1.1;
++        proxy_set_header Upgrade $http_upgrade;
++        proxy_set_header Connection "upgrade";
++        add_header Access-Control-Allow-Origin *;
++    }
++
++    location /history {
++        proxy_pass http://biab-ui:3000/history;
++        proxy_http_version 1.1;
++        proxy_set_header Upgrade $http_upgrade;
++        proxy_set_header Connection "upgrade";
++        add_header Access-Control-Allow-Origin *;
++    }
++
++    location /info {
++        proxy_pass http://biab-ui:3000/info;
++        proxy_http_version 1.1;
++        proxy_set_header Upgrade $http_upgrade;
++        proxy_set_header Connection "upgrade";
++        add_header Access-Control-Allow-Origin *;
++    }
++
++    location /pipeline-editor {
++        proxy_pass http://biab-ui:3000/pipeline-editor;
++        proxy_http_version 1.1;
++        proxy_set_header Upgrade $http_upgrade;
++        proxy_set_header Connection "upgrade";
++        add_header Access-Control-Allow-Origin *;
++    }
++
+     location / {
+         proxy_pass http://biab-ui:3000;
+         proxy_http_version 1.1;
+diff --git a/script-server/Dockerfile.dev b/script-server/Dockerfile.dev
+index 8bfaaae..389693c 100644
+--- a/script-server/Dockerfile.dev
++++ b/script-server/Dockerfile.dev
+@@ -2,12 +2,27 @@ FROM gradle:9.0-jdk21
+ 
+ #INSTALL DOCKER CLI
+ ENV DOCKER_VERSION=29.1.2
+-RUN curl -sfL -o docker.tgz "https://download.docker.com/linux/static/stable/x86_64/docker-${DOCKER_VERSION}.tgz" && \
++ARG TARGETARCH
++RUN arch="${TARGETARCH}"; \
++  if [ -z "$arch" ]; then arch="$(dpkg --print-architecture)"; fi; \
++  case "$arch" in \
++    amd64) docker_arch="x86_64"; compose_arch="x86_64" ;; \
++    arm64) docker_arch="aarch64"; compose_arch="aarch64" ;; \
++    *) echo "Unsupported TARGETARCH: $arch" >&2; exit 1 ;; \
++  esac; \
++  curl -sfL -o docker.tgz "https://download.docker.com/linux/static/stable/${docker_arch}/docker-${DOCKER_VERSION}.tgz" && \
+   tar -xzf docker.tgz docker/docker --strip=1 && \
+   mv docker /usr/local/bin && \
+   rm docker.tgz
+ 
+-RUN curl -L "https://github.com/docker/compose/releases/download/v2.3.3/docker-compose-linux-x86_64" -o /usr/local/bin/docker-compose
++RUN arch="${TARGETARCH}"; \
++  if [ -z "$arch" ]; then arch="$(dpkg --print-architecture)"; fi; \
++  case "$arch" in \
++    amd64) compose_arch="x86_64" ;; \
++    arm64) compose_arch="aarch64" ;; \
++    *) echo "Unsupported TARGETARCH: $arch" >&2; exit 1 ;; \
++  esac; \
++  curl -L "https://github.com/docker/compose/releases/download/v2.3.3/docker-compose-linux-${compose_arch}" -o /usr/local/bin/docker-compose
+ RUN chmod 755 /usr/local/bin/docker-compose
+ RUN chmod 755 /usr/local/bin/docker
+ 
+diff --git a/script-server/Dockerfile.prod b/script-server/Dockerfile.prod
+index 2c7903f..2d021eb 100644
+--- a/script-server/Dockerfile.prod
++++ b/script-server/Dockerfile.prod
+@@ -2,13 +2,28 @@ FROM eclipse-temurin:21-jre AS base-image
+ 
+ #INSTALL DOCKER CLI
+ ENV DOCKER_VERSION=29.1.2
+-RUN curl -sfL -o docker.tgz "https://download.docker.com/linux/static/stable/x86_64/docker-${DOCKER_VERSION}.tgz" && \
++ARG TARGETARCH
++RUN arch="${TARGETARCH}"; \
++  if [ -z "$arch" ]; then arch="$(dpkg --print-architecture)"; fi; \
++  case "$arch" in \
++    amd64) docker_arch="x86_64"; compose_arch="x86_64" ;; \
++    arm64) docker_arch="aarch64"; compose_arch="aarch64" ;; \
++    *) echo "Unsupported TARGETARCH: $arch" >&2; exit 1 ;; \
++  esac; \
++  curl -sfL -o docker.tgz "https://download.docker.com/linux/static/stable/${docker_arch}/docker-${DOCKER_VERSION}.tgz" && \
+   tar -xzf docker.tgz docker/docker --strip=1 && \
+   mv docker /usr/local/bin && \
+   rm docker.tgz
+ 
+ #INSTALL DOCKER COMPOSE
+-RUN curl -L "https://github.com/docker/compose/releases/download/v2.3.3/docker-compose-linux-x86_64" -o /usr/local/bin/docker-compose
++RUN arch="${TARGETARCH}"; \
++  if [ -z "$arch" ]; then arch="$(dpkg --print-architecture)"; fi; \
++  case "$arch" in \
++    amd64) compose_arch="x86_64" ;; \
++    arm64) compose_arch="aarch64" ;; \
++    *) echo "Unsupported TARGETARCH: $arch" >&2; exit 1 ;; \
++  esac; \
++  curl -L "https://github.com/docker/compose/releases/download/v2.3.3/docker-compose-linux-${compose_arch}" -o /usr/local/bin/docker-compose
+ RUN chmod 755 /usr/local/bin/docker-compose
+ RUN chmod 755 /usr/local/bin/docker
+ 
