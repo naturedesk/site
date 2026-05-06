@@ -157,7 +157,6 @@ include: ["_pages", "_scripts"]
 exclude:
   - requirements.txt
   - bin/
-  - CONTRIBUTING.md
   - CUSTOMIZE.md
   - Dockerfile
   - docker-compose.yml
@@ -170,7 +169,6 @@ exclude:
   - lighthouse_results/
   - package.json
   - package-lock.json
-  - _pages/about_einstein.md
   - purgecss.config.js
   - README.md
   - readme_preview/
@@ -528,7 +526,7 @@ third_party_libraries:
 
 jekyll_get_json:
   - data: resume
-    json: assets/json/resume.json # it can also be an url
+    json: # optional JSONResume source
 
 jsonresume:
   - basics
