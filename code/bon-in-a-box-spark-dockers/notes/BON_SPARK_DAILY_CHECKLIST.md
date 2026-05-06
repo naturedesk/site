@@ -1,9 +1,11 @@
 # BON in a Box on Spark, Daily Checklist
 
 ## Purpose
+
 Keep the local Spark arm64 BON in a Box path operational and detect regressions early.
 
 ## Daily checks
+
 1. Confirm core containers are up or can be brought up
 2. Confirm routed endpoints respond:
    - `/tiler/`
@@ -19,7 +21,9 @@ Keep the local Spark arm64 BON in a Box path operational and detect regressions 
 8. Record any blocker or regression immediately
 
 ## Regression rule
+
 If a daily check fails, classify the first hard blocker before attempting broad rebuilds.
 
 ## Update rule
+
 If GitHub contains a relevant upstream change, compare first before applying any local fix.
