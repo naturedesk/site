@@ -34,22 +34,22 @@ ninja.data = [{
           title: 'RAG for international biodiversity agreements &amp;amp; scientific reports',
           description: "A UvA challenge focused on improving searchability and source-grounded retrieval across IUCN resolutions and related biodiversity-policy material.",
           section: "Projects",handler: () => {
-              window.location.href = "/site/projects/1_uva_rag_biodiversity_agreements_scientific_reports/";
+              window.location.href = "/site/projects/1_uva_rag_biodiversity_agreements_scientific_reports.html";
             },},{id: "projects-help-us-build-an-llm-powered-biodiversity-assistant-for-ecologists-using-bon-in-a-box",
           title: 'Help us build an LLM-powered biodiversity assistant for ecologists using BON in a...',
           description: "A UvA challenge to prototype a front-end and LLM assistant that helps ecologists work with BON in a Box more easily.",
           section: "Projects",handler: () => {
-              window.location.href = "/site/projects/2_uva_biodiversity_assistant_bon_in_a_box/";
+              window.location.href = "/site/projects/2_uva_biodiversity_assistant_bon_in_a_box.html";
             },},{id: "projects-south-holland-lighthouse-use-case",
           title: 'South Holland lighthouse use case',
           description: "Evidence support for South Holland water governance, drinkwater security, PFAS pressure, and biodiversity-relevant system stress.",
           section: "Projects",handler: () => {
-              window.location.href = "/site/projects/3_south_holland_lighthouse_use_case/";
+              window.location.href = "/site/projects/3_south_holland_lighthouse_use_case.html";
             },},{id: "projects-the-hague-use-case",
           title: 'The Hague use case',
           description: "A municipal biodiversity monitoring and governance route built around Groenmonitor, stadsnatuur themes, and inspectable public evidence surfaces.",
           section: "Projects",handler: () => {
-              window.location.href = "/site/projects/4_the_hague_use_case/";
+              window.location.href = "/site/projects/4_the_hague_use_case.html";
             },},{
       id: 'light-theme',
       title: 'Change theme to light',

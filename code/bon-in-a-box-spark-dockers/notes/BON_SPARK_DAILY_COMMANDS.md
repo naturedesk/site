@@ -3,9 +3,11 @@
 ## Bring up working arm64 stack
 
 ```bash
+export BON_ENGINE_DIR="${BON_ENGINE_DIR:-$HOME/naturedesk-bon/bon-in-a-box-pipeline-engine}"
+export BON_SPARK_PACKAGE_DIR="${BON_SPARK_PACKAGE_DIR:-/path/to/code/bon-in-a-box-spark-dockers}"
 export DOCKER_GID="$(getent group docker | cut -d: -f3)"
 export MY_UID="$(id -u)"
-cd /home/hans/.openclaw/workspace/bon-in-a-box-pipeline-engine
+cd "$BON_ENGINE_DIR"
 
 docker compose \
   -f compose.yml \
@@ -23,9 +25,9 @@ docker compose \
 Use readiness-aware checks to avoid false regressions during startup.
 
 ```bash
-/home/hans/.openclaw/workspace/bon-in-a-box-spark-arm64/scripts/wait_for_endpoint.sh http://127.0.0.1/tiler/
-/home/hans/.openclaw/workspace/bon-in-a-box-spark-arm64/scripts/wait_for_endpoint.sh http://127.0.0.1/script/list
-/home/hans/.openclaw/workspace/bon-in-a-box-spark-arm64/scripts/wait_for_endpoint.sh http://127.0.0.1/pipeline/list
+$BON_SPARK_PACKAGE_DIR/scripts/wait_for_endpoint.sh http://127.0.0.1/tiler/
+$BON_SPARK_PACKAGE_DIR/scripts/wait_for_endpoint.sh http://127.0.0.1/script/list
+$BON_SPARK_PACKAGE_DIR/scripts/wait_for_endpoint.sh http://127.0.0.1/pipeline/list
 ```
 
 ## Hello-world execution check
@@ -40,14 +42,14 @@ curl -fsS 'http://127.0.0.1/api/history?limit=20'
 ## Ownership check
 
 ```bash
-find /home/hans/.openclaw/workspace/bon-in-a-box-pipeline-engine/pipeline-repo/output/helloWorld/helloPython -maxdepth 2 -type f -printf '%u %g %p\n' | sort
+find "$BON_ENGINE_DIR/pipeline-repo/output/helloWorld/helloPython" -maxdepth 2 -type f -printf '%u %g %p\n' | sort
 ```
 
 ## GitHub update scan
 
 ```bash
-git -C /home/hans/.openclaw/workspace/bon-in-a-box-pipeline-engine fetch origin --quiet
-git -C /home/hans/.openclaw/workspace/bon-in-a-box-pipelines fetch origin --quiet
-git -C /home/hans/.openclaw/workspace/bon-in-a-box-pipeline-engine branch -r
-git -C /home/hans/.openclaw/workspace/bon-in-a-box-pipelines branch -r
+git -C "$BON_ENGINE_DIR" fetch origin --quiet
+git -C "${BON_PIPELINES_DIR:-$HOME/naturedesk-bon/bon-in-a-box-pipelines}" fetch origin --quiet
+git -C "$BON_ENGINE_DIR" branch -r
+git -C "${BON_PIPELINES_DIR:-$HOME/naturedesk-bon/bon-in-a-box-pipelines}" branch -r
 ```
