@@ -19,18 +19,24 @@ code/bon-in-a-box-spark-dockers/
 ├── compose/
 │   ├── compose.arm64.local.yml
 │   └── compose.arm64.python-api.override.yml
+├── env/
+│   ├── dev-paths.env.example
+│   ├── hpc-secrets.env.example
+│   └── runner.env.example
 ├── patches/
 │   ├── bon-in-a-box-pipeline-engine-spark-arm64.patch
 │   └── bon-in-a-box-pipelines-runner-alignment.patch
 ├── scripts/
-│   └── pull_smoke_edge_arm64.sh
+│   ├── pull_smoke_edge_arm64.sh
+│   └── wait_for_endpoint.sh
 └── notes/
     ├── BON_SPARK_DAILY_CHECKLIST.md
     ├── BON_SPARK_DAILY_COMMANDS.md
+    ├── STUDENT_CLEAN_CHECKOUT_ENV_FILES.md
     └── UPSTREAM_DELTA_LEDGER.md
 ```
 
-## Current status — 2026-05-06
+## Current status — 2026-05-07
 
 Known-good local Spark ARM64 alignment:
 
@@ -56,12 +62,18 @@ On the Spark ARM64 host:
 - Git and Bash.
 - Network access to GitHub/GHCR.
 
-Check the host architecture:
+Check the host architecture and Docker access:
 
 ```bash
 uname -m
 # expected on Spark ARM64: aarch64
+
+getent group docker
+id -nG | grep -w docker
+docker ps
 ```
+
+If Docker group membership was just changed, a new login session may be required before `docker ps` works without permission errors.
 
 ## Clone upstream repositories
 
@@ -85,13 +97,17 @@ git fetch origin main
 
 ## Apply the NatureDesk Spark overlay
 
-Copy the `compose/` files into the pipeline-engine checkout:
+Set one overlay path and copy the `compose/` files into the pipeline-engine checkout:
 
 ```bash
-cp /path/to/code/bon-in-a-box-spark-dockers/compose/compose.arm64.local.yml \
+export OVERLAY_DIR=/absolute/path/to/code/bon-in-a-box-spark-dockers
+
+test -f "$OVERLAY_DIR/README.md"
+
+cp "$OVERLAY_DIR/compose/compose.arm64.local.yml" \
    ~/naturedesk-bon/bon-in-a-box-pipeline-engine/compose.arm64.local.yml
 
-cp /path/to/code/bon-in-a-box-spark-dockers/compose/compose.arm64.python-api.override.yml \
+cp "$OVERLAY_DIR/compose/compose.arm64.python-api.override.yml" \
    ~/naturedesk-bon/bon-in-a-box-pipeline-engine/compose.arm64.python-api.override.yml
 ```
 
@@ -99,7 +115,7 @@ Apply the pipeline-engine Spark patch:
 
 ```bash
 cd ~/naturedesk-bon/bon-in-a-box-pipeline-engine
-git apply /path/to/code/bon-in-a-box-spark-dockers/patches/bon-in-a-box-pipeline-engine-spark-arm64.patch
+git apply "$OVERLAY_DIR/patches/bon-in-a-box-pipeline-engine-spark-arm64.patch"
 ```
 
 The runner patch file is intentionally a note-only placeholder at the moment. The runner Docker definitions should match upstream `bon-in-a-box-pipelines` main.
@@ -113,14 +129,49 @@ cd ~/naturedesk-bon/bon-in-a-box-pipeline-engine
 ln -s ../bon-in-a-box-pipelines pipeline-repo
 ```
 
-Create or verify the expected path/env files according to the upstream project docs and the copied notes in `notes/`.
+For a clean student checkout, use the safe config-stage templates in `env/` rather than private local files:
 
-For local Spark runs, these environment values are normally needed:
+```bash
+cp "$OVERLAY_DIR/env/dev-paths.env.example" .dev-paths.env
+cp "$OVERLAY_DIR/env/runner.env.example" pipeline-repo/runner.env
+
+mkdir -p .naturedesk-dummy-secrets
+touch .naturedesk-dummy-secrets/hpc_ssh_key \
+      .naturedesk-dummy-secrets/hpc_known_hosts \
+      .naturedesk-dummy-secrets/hpc_ssh_config
+chmod 600 .naturedesk-dummy-secrets/hpc_ssh_key
+cp "$OVERLAY_DIR/env/hpc-secrets.env.example" .hpc-secrets.env
+```
+
+Then set the local Docker/user variables:
 
 ```bash
 export DOCKER_GID="$(getent group docker | cut -d: -f3)"
 export MY_UID="$(id -u)"
 ```
+
+If `DOCKER_GID` is empty or `docker ps` fails, stop and fix Docker permissions or use an explicitly documented `sudo docker` path. Do not hide this as a NatureDesk-specific issue.
+
+For details and failure-reporting instructions, see `notes/STUDENT_CLEAN_CHECKOUT_ENV_FILES.md`.
+
+## Config-only validation before build
+
+Before building or starting services, run a config-only Compose check:
+
+```bash
+docker compose \
+  -f compose.yml \
+  -f compose.dev.yml \
+  -f pipeline-repo/compose.env.yml \
+  -f compose.arm64.local.yml \
+  -f compose.arm64.python-api.override.yml \
+  --env-file pipeline-repo/runner.env \
+  --env-file .dev-paths.env \
+  --env-file .hpc-secrets.env \
+  config --quiet
+```
+
+A passing config check means the overlay and local env wiring are coherent enough for the next rehearsal step. It does **not** prove that the full stack builds, runs, or is student/production ready.
 
 ## Build the local Spark ARM64 services
 
@@ -138,6 +189,7 @@ docker compose \
   -f compose.arm64.python-api.override.yml \
   --env-file pipeline-repo/runner.env \
   --env-file .dev-paths.env \
+  --env-file .hpc-secrets.env \
   build python-api ui viewer script-server
 ```
 
@@ -152,8 +204,19 @@ docker compose \
   -f compose.arm64.python-api.override.yml \
   --env-file pipeline-repo/runner.env \
   --env-file .dev-paths.env \
+  --env-file .hpc-secrets.env \
   up -d script-server python-api gateway runner-conda runner-julia
 ```
+
+## Known issue box — `script-server:edge` on ARM64
+
+The upstream `script-server:edge` image currently pulls as ARM64, but its bundled Docker CLI / Docker Compose binaries may still be x86_64 and fail with `Exec format error` on ARM64.
+
+Interpretation:
+
+- this is why the NatureDesk local Spark script-server Docker patch still exists;
+- do not claim upstream `script-server:edge` alone is ARM64-runtime-ready;
+- do not hide this from students — it is a useful reproducibility lesson.
 
 ## Smoke-test upstream edge images only
 
