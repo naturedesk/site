@@ -29,9 +29,7 @@
   >
 {% endif %}
 
-<!-- Fonts & Icons -->
-<link defer rel="stylesheet" href="{{ '/assets/css/academicons.min.css' | relative_url | bust_file_cache }}">
-<link defer rel="stylesheet" href="{{ '/assets/css/scholar-icons.css' | relative_url | bust_file_cache }}">
+<!-- Fonts -->
 <link
   defer
   rel="stylesheet"
@@ -190,10 +188,6 @@
       crossorigin="anonymous"
     >
   {% endif %}
-{% endif %}
-
-{% if page.tikzjax %}
-  <link defer rel="stylesheet" type="text/css" href="{{ '/assets/css/tikzjax.min.css' | relative_url | bust_file_cache }}">
 {% endif %}
 
 {% if site.enable_cookie_consent %}

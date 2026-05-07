@@ -11,7 +11,7 @@ contact_note: >
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Evidence-grounded AI for nature governance: sovereign, explainable, source-linked workflows for biodiversity monitoring, policy interpretation, and practical decision support.
 footer_text: >
-  NatureDesk uses <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with the <a href="https://github.com/alshedivat/al-folio" target="_blank">al-folio</a> theme and is intended for deployment on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+  NatureDesk uses <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and is deployed with <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 keywords: nature governance, biodiversity monitoring, explainable ai, sovereign ai, policy analysis, naturedesk # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: naturedesk-logo-20260425.jpg # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
@@ -85,47 +85,9 @@ openpanel_analytics: # your Openpanel analytics client ID (format: XXXXXXXX-XXXX
 google_site_verification: # your google-site-verification ID (Google Search Console)
 bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 
-# -----------------------------------------------------------------------------
-# Blog
-# -----------------------------------------------------------------------------
-
-blog_name: NatureDesk Notes # blog_name will be displayed in your blog page
-blog_description: notes from Nature AI Governance Lab
-permalink: /blog/:year/:title/
-lsi: false # produce an index for related posts
-
-# Giscus comments (RECOMMENDED)
-# Follow instructions on https://giscus.app/ to setup for your repo to fill out the information below.
-giscus:
-  repo: # <your-github-user-name>/<your-github-repo-name>
-  repo_id: # leave empty or specify your repo_id (see https://giscus.app/)
-  category: Comments # name of the category under which discussions will be created
-  category_id: # leave empty or specify your category_id (see https://giscus.app/)
-  mapping: title # identify discussions by post title
-  strict: 1 # use strict identification mode
-  reactions_enabled: 1 # enable (1) or disable (0) emoji reactions
-  input_position: bottom # whether to display input form below (bottom) or above (top) the comments
-  dark_theme: dark # name of the dark color scheme (preferred works well with al-folio dark mode)
-  light_theme: light # name of the light color scheme (preferred works well with al-folio light mode)
-  emit_metadata: 0
-  lang: en
-
-# Disqus comments (DEPRECATED)
-disqus_shortname: # put your disqus shortname
-# https://help.disqus.com/en/articles/1717111-what-s-a-shortname
-
 # External sources.
 # Disabled for this landing-page deployment to keep builds deterministic.
 external_sources: []
-
-# -----------------------------------------------------------------------------
-# Newsletter
-# -----------------------------------------------------------------------------
-
-newsletter:
-  enabled: false
-  endpoint: # your loops endpoint (e.g., https://app.loops.so/api/newsletter-form/YOUR-ENDPOINT)
-  # https://loops.so/docs/forms/custom-form
 
 # -----------------------------------------------------------------------------
 # Collections
@@ -155,23 +117,17 @@ kramdown:
 # Includes & excludes
 include: ["_pages", "_scripts"]
 exclude:
-  - requirements.txt
   - bin/
-  - CUSTOMIZE.md
   - Dockerfile
   - docker-compose.yml
   - docker-compose-slim.yml
-  - FAQ.md
   - Gemfile
   - Gemfile.lock
-  - INSTALL.md
   - LICENSE
-  - lighthouse_results/
   - package.json
   - package-lock.json
   - purgecss.config.js
   - README.md
-  - readme_preview/
   - vendor
 keep_files:
   - CNAME
@@ -182,17 +138,13 @@ plugins:
   - jekyll-3rd-party-libraries
   - jekyll-cache-bust
   - jekyll-email-protect
-  - jekyll-feed
-  - jekyll-get-json
   - jekyll-imagemagick
   - jekyll-link-attributes
   - jekyll-minifier
   - jekyll-regex-replace
   - jekyll-sitemap
   - jekyll-socials
-  - jekyll-tabs
   - jekyll-terser
-  - jekyll-toc
   - jemoji
 
 # Sitemap settings
@@ -238,7 +190,7 @@ external_links:
 # MAKE SURE imagemagick is installed and on your PATH before enabling imagemagick. In a terminal, run:
 #   convert -version
 imagemagick:
-  enabled: true # enables responsive images for your site (recommended, see https://github.com/alshedivat/al-folio/issues/537)
+  enabled: true
   widths:
     - 480
     - 800
@@ -274,11 +226,11 @@ enable_google_verification: false # enables google site verification
 enable_bing_verification: false # enables bing site verification
 enable_cookie_consent: false # enables GDPR-compliant cookie consent dialog (https://github.com/orestbida/cookieconsent)
 enable_masonry: true # enables automatic project cards arrangement
-enable_math: true # enables math typesetting (uses MathJax)
+enable_math: false # enables math typesetting (uses MathJax)
 enable_tooltips: false # enables automatic tooltip links generated for each section titles on pages and posts
 enable_darkmode: true # enables switching between light/dark modes
 enable_navbar_social: false # enables displaying social links in the navbar on the about page
-enable_project_categories: true # enables categorization of projects into multiple categories
+enable_project_categories: false # no category pages are used on the NatureDesk landing site
 enable_medium_zoom: true # enables image zoom feature (as on medium.com)
 enable_progressbar: true # enables a horizontal progress bar linked to the vertical scroll position
 enable_video_embedding: false # enables video embedding for bibtex entries. If false, the button opens the video link in a new window.

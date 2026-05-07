@@ -137,16 +137,6 @@
   <script defer src="{{ '/assets/js/vega-setup.js' | relative_url | bust_file_cache }}" type="text/javascript"></script>
 {% endif %}
 
-{% if page.tikzjax %}
-  <!-- Tikzjax -->
-  <script defer src="{{ '/assets/js/tikzjax.min.js' | relative_url | bust_file_cache }}" type="text/javascript"></script>
-{% endif %}
-
-{% if page.typograms %}
-  <!-- Typograms -->
-  <script src="{{ '/assets/js/typograms.js' | relative_url | bust_file_cache }}"></script>
-{% endif %}
-
 {% if site.enable_tooltips %}
   <!-- Tooltips -->
   <script src="{{ '/assets/js/tooltips-setup.js' | relative_url | bust_file_cache }}"></script>
@@ -183,9 +173,6 @@
 <script src="{{ '/assets/js/no_defer.js' | relative_url | bust_file_cache }}"></script>
 <script defer src="{{ '/assets/js/common.js' | relative_url | bust_file_cache }}"></script>
 <script defer src="{{ '/assets/js/copy_code.js' | relative_url | bust_file_cache }}" type="text/javascript"></script>
-
-<!-- Jupyter Open External Links New Tab -->
-<script defer src="{{ '/assets/js/jupyter_new_tab.js' | relative_url | bust_file_cache }}"></script>
 
 <!-- Badges -->
 {% if site.enable_publication_badges.altmetric %}

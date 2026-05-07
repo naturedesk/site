@@ -1,6 +1,6 @@
 # NatureDesk GitHub Pages site
 
-This repository contains the GitHub Pages landing site for **Nature AI Governance Lab / NatureDesk**, based on the **al-folio** theme.
+This repository contains the GitHub Pages landing site for **Nature AI Governance Lab / NatureDesk**.
 
 ## Target URL
 
