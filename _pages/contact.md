@@ -4,7 +4,7 @@ title: contact
 permalink: /contact/
 description: Explore a pilot or collaboration around biodiversity monitoring, EBVs, and traceable AI support.
 nav: true
-nav_order: 3
+nav_order: 4
 ---
 
 ## Start an exploration
