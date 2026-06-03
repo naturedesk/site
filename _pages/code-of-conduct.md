@@ -1,15 +1,11 @@
 ---
 layout: page
-title: code of conduct
+title: Code of Conduct
 permalink: /code-of-conduct/
 description: NatureDesk rules for biodiversity intelligence, scientific collaboration, AI-assisted workflows, and external communication.
 nav: true
 nav_order: 3
 ---
-
-## NatureDesk Code of Conduct
-
-For biodiversity intelligence, scientific collaboration, AI-assisted workflows, and external communication.
 
 **Version:** 1  
 **Date:** June 1, 2026  
