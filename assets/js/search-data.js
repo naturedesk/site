@@ -23,6 +23,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/site/use-cases/";
           },
+        },{id: "nav-code-of-conduct",
+          title: "code of conduct",
+          description: "NatureDesk rules for biodiversity intelligence, scientific collaboration, AI-assisted workflows, and external communication.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/site/code-of-conduct/";
+          },
         },{id: "nav-contact",
           title: "contact",
           description: "Explore a pilot or collaboration around biodiversity monitoring, EBVs, and traceable AI support.",
