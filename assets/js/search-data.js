@@ -24,7 +24,7 @@ ninja.data = [{
             window.location.href = "/site/use-cases/";
           },
         },{id: "nav-code-of-conduct",
-          title: "Code of Conduct",
+          title: "code of conduct",
           description: "NatureDesk rules for biodiversity intelligence, scientific collaboration, AI-assisted workflows, and external communication.",
           section: "Navigation",
           handler: () => {
