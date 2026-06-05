@@ -91,6 +91,31 @@
   - UI/viewer images report Node v25.9.0 from current upstream node base tags.
   - script-server image reports OpenJDK 21.0.8.
 
+## 2026-06-05
+
+### bon-in-a-box-pipelines
+
+- Local branch used for the fix: `forge/spark-arm64-duckdb-doc-fix`
+- Remote default branch: `origin/main`
+
+#### Relevant observed runtime delta
+
+- BII browser run failed before analysis during `data>loadFromStac` conda environment creation on Spark ARM64.
+- `scripts/data/loadFromStac.yml` depended on R geospatial packages that are unavailable in the conda-forge `linux-aarch64` solve path, including `r-gdalcubes=0.7.1` and `r-proj`.
+- End-to-end validation exposed the same ARM64 conda-package class in `scripts/zonal_statistics/zonal_stats.yml` through `r-exactextractr`.
+
+#### Judgment
+
+- Treat as a runner/environment routing issue, not a student input issue.
+- Use the validated ARM64 `rbase` runner environment for these R geospatial scripts instead of creating failing per-script conda environments.
+- Keep the student-facing explanation visible in the NatureDesk site package because the failure happens in the browser before the analysis starts.
+
+#### Documentation action
+
+- Added `notes/ARM64_STAC_GDALCUBES_BII_FIX.md`.
+- Updated the Docker package README current status and fixed-issue box.
+- Stored the Team Platypus explainer PDF at `explainers/team_platypus_arm_stac_fix_explainer_2026-06-05.pdf`.
+
 ## Rule
 
 Do not adopt upstream changes into the Spark operational path without classifying them first as:
