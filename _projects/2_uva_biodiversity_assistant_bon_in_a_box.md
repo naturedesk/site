@@ -21,6 +21,6 @@ BON in a Box is strong on transparent biodiversity monitoring and indicator pipe
 
 ### Spark ARM64 runtime notes
 
-The NatureDesk Spark ARM64 BON in a Box Docker package is documented in [`code/bon-in-a-box-spark-dockers/README.md`](/code/bon-in-a-box-spark-dockers/README.md).
+The NatureDesk Spark ARM64 BON in a Box Docker package is documented on the [BON in a Box Spark ARM64 support page]({{ '/bon-spark-arm64/' | relative_url }}).
 
 The 2026-06-04 BII browser blocker is now recorded there as a fixed issue: `data>loadFromStac` and `zonal_statistics>zonal_stats` previously tried to solve per-script conda environments with R geospatial packages unavailable on `linux-aarch64`. The Spark route now uses the validated ARM64 `rbase` runner environment for those scripts, and the Team Platypus explainer PDF is stored with the Docker package.
