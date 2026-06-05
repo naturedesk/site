@@ -64,7 +64,7 @@ Important BII workflow result from 2026-06-04:
 - Fix: both scripts now use the validated ARM64 `rbase` runner route, with `gdalcubes` and `exactextractr` available from the runner image/source-install path.
 - Verification: browser/gateway/script-server BII smoke test reached analysis, wrote STAC rasters, `BII_change.tif`, and `zonal_stats.csv` for supported years `2015` to `2020`.
 
-See `notes/ARM64_STAC_GDALCUBES_BII_FIX.md` for the issue/fix record and `explainers/team_platypus_arm_stac_fix_explainer_2026-06-05.pdf` for the stored explainer.
+See `notes/ARM64_STAC_GDALCUBES_BII_FIX.md` for the issue/fix record and `explainers/team_platypus_arm_stac_fix_explainer_2026-06-05.pdf` for the stored explainer. Hans confirmed on 2026-06-05 that the explainer is public-release safe; any older internal wording inside the PDF is an outdated label.
 
 ## Prerequisites
 

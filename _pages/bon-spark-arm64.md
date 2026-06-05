@@ -14,7 +14,7 @@ The package documents how the NatureDesk Spark route stays aligned with upstream
 
 - [Docker package README]({{ '/code/bon-in-a-box-spark-dockers/README.md' | relative_url }})
 - [ARM64 STAC / gdalcubes BII fixed-issue note]({{ '/code/bon-in-a-box-spark-dockers/notes/ARM64_STAC_GDALCUBES_BII_FIX.md' | relative_url }})
-- [Team Platypus ARM STAC fix explainer PDF]({{ '/code/bon-in-a-box-spark-dockers/explainers/team_platypus_arm_stac_fix_explainer_2026-06-05.pdf' | relative_url }})
+- [Team Platypus ARM STAC fix explainer PDF]({{ '/code/bon-in-a-box-spark-dockers/explainers/team_platypus_arm_stac_fix_explainer_2026-06-05.pdf' | relative_url }}) - confirmed public-release safe on 2026-06-05; any older internal wording inside the PDF is an outdated label.
 
 ## Fixed BII browser blocker
 
