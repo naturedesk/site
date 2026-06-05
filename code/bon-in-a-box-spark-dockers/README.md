@@ -29,14 +29,17 @@ code/bon-in-a-box-spark-dockers/
 ├── scripts/
 │   ├── pull_smoke_edge_arm64.sh
 │   └── wait_for_endpoint.sh
+├── explainers/
+│   └── team_platypus_arm_stac_fix_explainer_2026-06-05.pdf
 └── notes/
     ├── BON_SPARK_DAILY_CHECKLIST.md
     ├── BON_SPARK_DAILY_COMMANDS.md
+    ├── ARM64_STAC_GDALCUBES_BII_FIX.md
     ├── STUDENT_CLEAN_CHECKOUT_ENV_FILES.md
     └── UPSTREAM_DELTA_LEDGER.md
 ```
 
-## Current status — 2026-05-07
+## Current status — 2026-06-05
 
 Known-good local Spark ARM64 alignment:
 
@@ -44,7 +47,8 @@ Known-good local Spark ARM64 alignment:
 - Gateway/UI/viewer Docker base images aligned to newer upstream edge definitions.
 - Script-server Dockerfile keeps NatureDesk's ARM64-aware Docker CLI / Docker Compose download logic.
 - Local route fixes are preserved for `/pipeline-form`, `/script-form`, `/history`, `/info`, and `/pipeline-editor`.
-- Runner Docker definitions are aligned with upstream `bon-in-a-box-pipelines` main; no extra NatureDesk runner patch is currently required.
+- Runner Docker definitions are aligned with upstream `bon-in-a-box-pipelines` main, with Spark ARM64 R runner support for source-built packages that are unavailable as conda-forge `linux-aarch64` packages.
+- BII browser workflow now passes the previous ARM64 STAC/gdalcubes conda solve blocker by routing `data>loadFromStac` and `zonal_statistics>zonal_stats` through the validated ARM64 `rbase` runner environment.
 
 Important smoke-test result from 2026-05-06:
 
@@ -52,6 +56,15 @@ Important smoke-test result from 2026-05-06:
 - `gateway:edge` pulled and passed an ARM64 asset/nginx smoke test.
 - `runner-julia:edge` pulled and passed an ARM64 Julia smoke test.
 - `script-server:edge` pulled as ARM64 and its Java JAR exists, but its bundled `/usr/local/bin/docker` and `/usr/local/bin/docker-compose` are still x86_64 binaries and fail with `Exec format error` on ARM64. Use the local Spark patch/build for script-server on ARM64 until upstream publishes corrected ARM64 Docker CLI binaries.
+
+Important BII workflow result from 2026-06-04:
+
+- Root cause: `data>loadFromStac.yml` forced a per-script conda environment with `r-gdalcubes=0.7.1` and `r-proj`, which are unavailable for the Spark ARM64 route as conda-forge `linux-aarch64` packages.
+- Downstream validation exposed the same class of ARM64 conda gap in `zonal_statistics>zonal_stats.yml` through `r-exactextractr`.
+- Fix: both scripts now use the validated ARM64 `rbase` runner route, with `gdalcubes` and `exactextractr` available from the runner image/source-install path.
+- Verification: browser/gateway/script-server BII smoke test reached analysis, wrote STAC rasters, `BII_change.tif`, and `zonal_stats.csv` for supported years `2015` to `2020`.
+
+See `notes/ARM64_STAC_GDALCUBES_BII_FIX.md` for the issue/fix record and `explainers/team_platypus_arm_stac_fix_explainer_2026-06-05.pdf` for the stored explainer.
 
 ## Prerequisites
 
@@ -217,6 +230,17 @@ Interpretation:
 - this is why the NatureDesk local Spark script-server Docker patch still exists;
 - do not claim upstream `script-server:edge` alone is ARM64-runtime-ready;
 - do not hide this from students — it is a useful reproducibility lesson.
+
+## Fixed issue box — BII `loadFromStac` conda solve on ARM64
+
+The BII browser workflow previously failed before analysis when `data>loadFromStac` tried to create a script-specific conda environment on ARM64.
+
+Interpretation:
+
+- this was a package availability problem in the ARM64 conda solve path, not a student input problem;
+- `r-gdalcubes`, `r-proj`, and later `r-exactextractr` exposed the same missing-package class;
+- the fixed Docker/runner documentation route is to use the validated ARM64 `rbase` environment for these R geospatial scripts;
+- BII year selection still matters: the BII change step supports `2000`, `2005`, `2010`, `2015`, and `2020`.
 
 ## Smoke-test upstream edge images only
 
