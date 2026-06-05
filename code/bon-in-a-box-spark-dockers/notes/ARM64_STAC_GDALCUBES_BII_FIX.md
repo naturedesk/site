@@ -60,6 +60,8 @@ Do not ask students to change BII settings to work around missing ARM64 conda pa
 
 ## Attached explainer
 
-The meeting explainer PDF is stored in this site package:
+The meeting explainer PDF is stored in this site package. Hans confirmed on
+2026-06-05 that it is public-release safe; any older internal wording inside
+the PDF is an outdated label.
 
 `code/bon-in-a-box-spark-dockers/explainers/team_platypus_arm_stac_fix_explainer_2026-06-05.pdf`
