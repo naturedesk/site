@@ -116,6 +116,47 @@
 - Updated the Docker package README current status and fixed-issue box.
 - Stored the Team Platypus explainer PDF at `explainers/team_platypus_arm_stac_fix_explainer_2026-06-05.pdf`.
 
+## 2026-06-14
+
+### bon-in-a-box-pipelines
+
+- Local branch used for the fix: local Spark ARM64 runner workspace
+- Remote default branch: `origin/main`
+
+#### Relevant observed runtime deltas
+
+- `SDM>BRT>fitBRT.yml` failed before model execution when the Julia wrapper could not load `JSON` from the shared Julia project/depot.
+- BRT then exposed current-package drift in `ArchGDAL`, shape mismatch for `water_mask`, and non-finite predictor handling.
+- `SDM>runMaxent.yml` failed on an unsolvable ARM64 per-script R conda environment and older ENMeval assumptions.
+- `SDM>runewlgcp.yml` failed on ARM64 R dependency mismatch, CRS-unit scale assumptions, and finally x86-64 INLA native binaries inside the ARM64 runner.
+
+#### Judgment
+
+- Treat these as Spark ARM64 runner/script compatibility defects.
+- Route MaxEnt and ewlgcp through the validated shared ARM64 `rbase` path instead of creating failing per-script conda environments.
+- Keep BRT on the shared Julia depot route and patch script assumptions for the current Julia geospatial stack.
+- Keep all SDM outputs internal/prototype until BON Operator and Evaluation & Audit accept the evidence and source-rights, DOI/citation, sensitive-locality, and readiness gates are complete.
+
+#### Documentation action
+
+- Added `notes/ARM64_SDM_RUNNER_FIXES_2026-06-14.md`.
+- Updated the Docker package README current status and fixed-issue box.
+
+#### Verification
+
+- BRT component run produced `output.json`, GeoTIFF outputs, fit statistics, pseudoabsences, and diagnostics.
+- MaxEnt component run produced `output.json` and GeoTIFF prediction outputs.
+- ewlgcp component run produced `output.json`, prediction/uncertainty/confidence GeoTIFF outputs, GeoJSON observation/background/mesh outputs, and logs.
+
+#### Non-claims
+
+- No ecological validation.
+- No public SDM data product.
+- No GBIF DOI/citation readiness.
+- No sensitive-locality clearance.
+- No student/client/policy/production readiness.
+- No all-40 clearance by this note alone.
+
 ## Rule
 
 Do not adopt upstream changes into the Spark operational path without classifying them first as:
