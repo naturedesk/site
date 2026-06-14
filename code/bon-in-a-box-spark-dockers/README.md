@@ -35,11 +35,12 @@ code/bon-in-a-box-spark-dockers/
     ├── BON_SPARK_DAILY_CHECKLIST.md
     ├── BON_SPARK_DAILY_COMMANDS.md
     ├── ARM64_STAC_GDALCUBES_BII_FIX.md
+    ├── ARM64_SDM_RUNNER_FIXES_2026-06-14.md
     ├── STUDENT_CLEAN_CHECKOUT_ENV_FILES.md
     └── UPSTREAM_DELTA_LEDGER.md
 ```
 
-## Current status — 2026-06-05
+## Current status — 2026-06-14
 
 Known-good local Spark ARM64 alignment:
 
@@ -49,6 +50,7 @@ Known-good local Spark ARM64 alignment:
 - Local route fixes are preserved for `/pipeline-form`, `/script-form`, `/history`, `/info`, and `/pipeline-editor`.
 - Runner Docker definitions are aligned with upstream `bon-in-a-box-pipelines` main, with Spark ARM64 R runner support for source-built packages that are unavailable as conda-forge `linux-aarch64` packages.
 - BII browser workflow now passes the previous ARM64 STAC/gdalcubes conda solve blocker by routing `data>loadFromStac` and `zonal_statistics>zonal_stats` through the validated ARM64 `rbase` runner environment.
+- SDM model-runner component checks now pass for BRT, MaxEnt, and ewlgcp on the local Spark ARM64 route after runner/dependency and script-scale fixes. These are internal/prototype component-script outputs, not public SDM products.
 
 Important smoke-test result from 2026-05-06:
 
@@ -65,6 +67,15 @@ Important BII workflow result from 2026-06-04:
 - Verification: browser/gateway/script-server BII smoke test reached analysis, wrote STAC rasters, `BII_change.tif`, and `zonal_stats.csv` for supported years `2015` to `2020`.
 
 See `notes/ARM64_STAC_GDALCUBES_BII_FIX.md` for the issue/fix record and `explainers/team_platypus_arm_stac_fix_explainer_2026-06-05.pdf` for the stored explainer. Hans confirmed on 2026-06-05 that the explainer is public-release safe; any older internal wording inside the PDF is an outdated label.
+
+Important SDM model-runner result from 2026-06-14:
+
+- BRT no longer fails before model execution on missing Julia `JSON`; the local route exposes the shared `/julia_depot`, handles current `ArchGDAL`, accepts `water_mask` array inputs, and filters non-finite predictor values.
+- MaxEnt no longer depends on an unsolvable ARM64 per-script conda environment; it uses the shared `rbase` route with current ENMeval-compatible runtime handling and bounded fold selection for small fixtures.
+- ewlgcp no longer fails on the ARM64 `terra`/`raster` environment path or x86-64 INLA native binaries; the local route uses the shared `rbase` path, CRS-aware mesh/buffer scaling, and an aarch64 INLA binary payload.
+- Verification produced component-script raw outputs for all three SDM model runners, including GeoTIFF/JSON outputs for BRT and MaxEnt and GeoTIFF/GeoJSON/JSON outputs for ewlgcp.
+
+See `notes/ARM64_SDM_RUNNER_FIXES_2026-06-14.md` for the bug-fix record. This does not claim ecological validation, GBIF DOI/citation readiness, sensitive-locality clearance, public release, production readiness, or all-40 pipeline clearance.
 
 ## Prerequisites
 
@@ -241,6 +252,17 @@ Interpretation:
 - `r-gdalcubes`, `r-proj`, and later `r-exactextractr` exposed the same missing-package class;
 - the fixed Docker/runner documentation route is to use the validated ARM64 `rbase` environment for these R geospatial scripts;
 - BII year selection still matters: the BII change step supports `2000`, `2005`, `2010`, `2015`, and `2020`.
+
+## Fixed issue box — SDM runner dependencies on ARM64
+
+The BRT, MaxEnt, and ewlgcp SDM model-runner scripts previously failed late in runner-specific dependency paths on Spark ARM64.
+
+Interpretation:
+
+- BRT was blocked by Julia project/depot visibility and API drift around current geospatial dependencies;
+- MaxEnt and ewlgcp exposed the same ARM64 package-availability class as the BII fix when their scripts tried to create dedicated conda environments;
+- ewlgcp also required CRS-aware scaling and an ARM64-native INLA binary payload;
+- the fix is a local Spark ARM64 runner/script compatibility fix, not a species-distribution validation result.
 
 ## Smoke-test upstream edge images only
 
